@@ -6,7 +6,7 @@ var list = [];
 var quantity;
 
 function setup() {
-    createCanvas(window.innerWidth * 0.8, window.innerHeight * 0.8);
+    createCanvas(500, 500);
     board = new Tablero(width, height);
     disk = new Disk(width * 0.25 / 2, height * 0.5, 255);
     player1 = new Player(255,0,0);
@@ -28,8 +28,8 @@ function writeDisks() {
         list[i] = new Disk(posX, posY, 255);
         posX += list[i].width;
         if (posX >= width) {
-            posY += list[i].width + 2.5;
-            posX = disk.getPosX() + 2.5;
+            posY += list[i].width;
+            posX = disk.getPosX();
         }
 
     }
@@ -55,5 +55,4 @@ function fillDisk(){
 }
 
 function mousePressed(){
-    if ()
 }
